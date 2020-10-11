@@ -1,14 +1,10 @@
 import React from 'react';
-import Cards from './Components/Cards/cards';
-import Header from './Components/Header/header';
-
-
+import List from './Components/List/list';
 
 const App = () => {
     return(
         <div>
-            <Header/>
-            <Cards/>
+            <List/>
         </div>
     )
 }
