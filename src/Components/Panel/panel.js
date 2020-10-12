@@ -1,16 +1,15 @@
 import React from 'react';
-import Cards from '../Cards/cards';
+import Week from '../Week/week';
 import panelModule from './panel.module.css';
 const Panel = ({ data }) => {
     const { city, list } = data
     const { coord, country, name } = city;
-    console.log("Cards -> coord", coord)
-    console.log("Cards -> list", list[0])
-    const {dt_txt,main,weather,wind} = list[0];
-    console.log("Cards -> weather", weather)
-    console.log("Cards -> main", main)
-    console.log("Cards -> dt_txt", dt_txt.slice(11,16))//09:00
-    console.log("Cards -> dt_txt", dt_txt.slice(0,10).split("-").reverse().join("-"))//2020-10-12
+    const {dt_txt,main,wind,weather} = list[0];
+    // console.log("Cards -> coord", coord)
+    // console.log("Cards -> list", list[0])
+    // console.log("Cards -> main", main)
+    // console.log("Cards -> dt_txt", dt_txt.slice(11,16))//09:00
+    // console.log("Cards -> dt_txt", dt_txt.slice(0,10).split("-").reverse().join("-"))//2020-10-12
         return (
         <div>
             <div className={panelModule.container} id={panelModule.wrapper}>
@@ -56,7 +55,7 @@ const Panel = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <Cards
+            <Week
                 data={list}
             />
         </div>
