@@ -20,8 +20,8 @@
     max-width: 680px;
     margin: 0 auto;
     height: 42px;
-    border-radius: 2px;
-    box-shadow: 3px 3px 8px 0 rgba(0, 0, 2, 14);
+    border-radius: 200px;
+    box-shadow: 3px 3px 8px 2px rgba(0, 2, 2, 14);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -44,7 +44,7 @@
 .searchBarMain input#searchBarInput {
     height: 42px;
     padding: 0;
-    margin: 0;
+    margin:auto; 
     border: 0;
     box-sizing: border-box;
     background: transparent;
@@ -53,6 +53,7 @@
     padding-right: 32px;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.76);
+    text-align: center;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
 }
