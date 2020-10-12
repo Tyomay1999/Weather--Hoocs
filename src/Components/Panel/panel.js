@@ -5,19 +5,19 @@ const Panel = ({ data }) => {
     const { city, list } = data
     const { coord, country, name } = city;
     const {dt_txt,main,wind,weather} = list[0];
-    // console.log("Cards -> coord", coord)
-    // console.log("Cards -> list", list[0])
-    // console.log("Cards -> main", main)
-    // console.log("Cards -> dt_txt", dt_txt.slice(11,16))//09:00
-    // console.log("Cards -> dt_txt", dt_txt.slice(0,10).split("-").reverse().join("-"))//2020-10-12
         return (
         <div>
             <div className={panelModule.container} id={panelModule.wrapper}>
                 <div className={panelModule.container_fluid} id={panelModule.current_weather}>
                     <div className={panelModule.row}>
                         <div className={panelModule.head}>
-                            <p id={panelModule.tempDescription}>iconeTemp</p>
-                            <h6 id={panelModule.localDate}> {country} </h6>
+                            <p id={panelModule.tempDescription}>
+                                <img src={`http://openweathermap.org/img/w/${weather[0].icon}.png`} alt='' />
+                            </p>
+                            <div>
+                            <h6 id={panelModule.localDate}>{country}</h6>
+                                <img src={`https://www.countryflags.io/${country}/flat/64.png`} alt=''/>
+                            </div>
 
                         </div>
                         <div className={panelModule.descrip}>
